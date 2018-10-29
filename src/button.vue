@@ -51,7 +51,7 @@
 		align-items: center;
 		vertical-align: middle;
 		&:hover {
-			border-color: red;
+			border-color: var(--border-color);
 		}
 
 		&:active {
