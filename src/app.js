@@ -12,29 +12,32 @@ new Vue({
 	data: {
 		loading1: false,
 		loading2: true,
-		loading3: false
+		loading3: true
 	}
 })
 
 //单元测试
 import chai from 'chai'
+import spies from 'chai-spies'
+chai.use(spies)
 
 const expect = chai.expect
 
+//单元测试
 {
 	const div = document.createElement(div)
 	document.body.appendChild(div)
 	const Constructor = Vue.extend(Button)
 	const vm = new Constructor({
 		propsData: {
-			icon: 'setting'
+			icon: 'settings'
 		}
 
 	})
 	vm.$mount(div)
 	let useElement = vm.$el.querySelector('use')
 	let href = useElement.getAttribute('xlink:href')
-	expect(href).to.eq('#icon-setting')
+	expect(href).to.eq('#i-settings')
 	vm.$el.remove()
 	vm.$destroy()
 
@@ -46,7 +49,7 @@ const expect = chai.expect
 	const Constructor = Vue.extend(Button)
 	const vm = new Constructor({
 		propsData: {
-			icon: 'setting',
+			icon: 'settings',
 			loading: true
 		}
 
@@ -54,7 +57,7 @@ const expect = chai.expect
 	vm.$mount(div)
 	let useElement = vm.$el.querySelector('use')
 	let href = useElement.getAttribute('xlink:href')
-	expect(href).to.eq('#icon-loading')
+	expect(href).to.eq('#i-loading')
 	vm.$el.remove()
 	vm.$destroy()
 
@@ -66,7 +69,7 @@ const expect = chai.expect
 	const Constructor = Vue.extend(Button)
 	const vm = new Constructor({
 		propsData: {
-			icon: 'setting',
+			icon: 'settings',
 		}
 
 	})
@@ -85,7 +88,7 @@ const expect = chai.expect
 	const Constructor = Vue.extend(Button)
 	const vm = new Constructor({
 		propsData: {
-			icon: 'setting',
+			icon: 'settings',
 			iconPosition: 'right'
 		}
 	})
@@ -101,15 +104,14 @@ const expect = chai.expect
 	const Constructor = Vue.extend(Button)
 	const vm = new Constructor({
 		propsData: {
-			icon: 'setting',
+			icon: 'settings',
 		}
 	})
 	vm.$mount()
-	vm.$on('click', function () {
-		expect(1).to.eq(1)
-	})
-	// 希望这个函数被执行
+	let spy = chai.spy(function(){})
+	vm.$on('click', spy) // 希望这个函数被执行
 	let button = vm.$el
 	button.click()
+	expect(spy).to.have.been.called() //期望函数执行
 }
 
