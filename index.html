@@ -43,11 +43,16 @@
 
 <div id="app">
 	<div class="box">
-		<g-input disabled value="张三"></g-input>
+		<g-input v-model="message" ></g-input>
+		<span>{{message}}</span>
+	</div>
+	<div class="box">
 		<g-input readonly value="张三"></g-input>
 		<g-input value="李四"></g-input>
-
 	</div>
+
+
+
 	<div class="box">
 		<g-input value="里斯" error="姓名不能少于两个字"></g-input>
 	</div>

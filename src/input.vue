@@ -1,9 +1,14 @@
 <template>
 	<div class="wrapper" :class="{error}">
-		<input :value="value"  :disabled="disabled" :readonly="readonly" type="text">
+		<input :value="value"  :disabled="disabled" :readonly="readonly" type="text"
+		@change="$emit('change',$event.target.value)"
+		@input="$emit('input',$event.target.value)"
+		@focus="$emit('focus',$event.target.value)"
+		@blur="$emit('blur',$event.target.value)"
+		>
 		<template>
 			<Icon name="error" class="icon-error" v-if="error"></Icon>
-			<span  class="iconMessage" v-if="error">{{error}}</span>
+			<span  class="errorMessage" v-if="error">{{error}}</span>
 		</template>
 	</div>
 </template>

@@ -14,7 +14,8 @@ new Vue({
 	data: {
 		loading1: false,
 		loading2: true,
-		loading3: true
+		loading3: true,
+		message:'双向绑定'
 	}
 })
 
