@@ -25,8 +25,9 @@
 			iconPosition:{
 				type: String,
 				default:'left',
-				validator(value){
-					return value ==='left' || value ==='right'
+				validator: function (value) {
+					return value === 'left' || value === 'right'
+					//第一个为 true 返回第一个 否则返回第二个
 				}
 			}
 
@@ -34,7 +35,7 @@
 	}
 </script>
 
-<style  lang="scss">
+<style  lang="scss" scoped>
 	@keyframes spin {
 		0%{
 			transform: rotate(0deg);

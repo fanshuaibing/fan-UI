@@ -8,7 +8,7 @@
 	export default {
 		mounted(){
 			for (let node of this.$el.children){
-				let name = node.nodeName.toLowerCase()
+				let name = node.nodeName.toLowerCase();
 				if(name !=='button'){
 					console.log(`g-button-group 的子元素应该都是 g-button,但你写的是 ${name}`)
 				}
@@ -17,7 +17,7 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped >
 	.g-button-group{
 		display: inline-flex;
 		vertical-align: middle;
