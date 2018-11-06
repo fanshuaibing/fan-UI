@@ -13,15 +13,10 @@ new Vue({
 	el: '#app',
 	data: {
 		loading1: false,
-		loading2: true,
+		loading2: false,
 		loading3: true,
 		message:'双向绑定'
 	}
 })
 
-//单元测试
-import chai from 'chai'
-import spies from 'chai-spies'
-chai.use(spies)
 
-const expect = chai.expect

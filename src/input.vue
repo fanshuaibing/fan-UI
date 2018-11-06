@@ -19,7 +19,6 @@
 		components:{
 			Icon
 		},
-		name: "input",
 		props:{
 			value:{
 				type:String
