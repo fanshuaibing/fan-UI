@@ -17,7 +17,8 @@
       },
       offset: {
         type: [Number, String]
-      }
+      },
+
     },
     data() {
       return {
@@ -43,9 +44,7 @@
 <style scoped lang="scss">
   .col {
     height: 50px;
-
     width: 50%;
-
     $class-prefix: col-;
     @for $n from 1 through 24 {
       &.#{$class-prefix}#{$n} {
