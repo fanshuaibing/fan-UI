@@ -35,6 +35,12 @@
     .box {
       margin: 20px;
     }
+
+    .demo {
+      background: #ddd;
+      border: 1px solid #666;
+      height: 50px;
+    }
   </style>
 
 
@@ -43,34 +49,34 @@
 
 <div id="app">
   <div style="border:1px  solid  black">
-
     <g-row>
-      <g-col>1</g-col>
-      <g-col>2</g-col>
+      <g-col span="24" :ipad="{span:12}" :pc="{span:16}" :wide-pc="{span:8}">
+        <div class="demo">1</div>
+      </g-col>
+      <g-col span="24" :ipad="{span:12}" :pc="{span:  8}" :wide-pc="{span:8}">
+        <div class="demo">1</div>
+      </g-col>
+      <g-col span="24" :ipad="{span:12}" :pc="{span:8}" :wide-pc="{span:8}">
+        <div class="demo">1</div>
+      </g-col>
+      <g-col span="24" :ipad="{span:12}" :wide-pc="{span:2}">
+        <div class="demo">1</div>
+      </g-col>
+      <g-col span="24" :ipad="{span:4}" :wide-pc="{span:20}">
+        <div class="demo">1</div>
+      </g-col>
+      <g-col span="24" :ipad="{span:12}" :wide-pc="{span:2}">
+        <div class="demo">1</div>
+      </g-col>
+      <g-col >
+        <div class="demo">1</div>
+      </g-col>
+      <g-col >
+        <div class="demo">1</div>
+      </g-col>
+
     </g-row>
 
-    <g-row>
-      <g-col>1</g-col>
-      <g-col>2</g-col>
-      <g-col>3</g-col>
-    </g-row>
-
-    <g-row gutter="20">
-      <g-col>1</g-col>
-      <g-col>2</g-col>
-    </g-row>
-
-
-    <g-row gutter="20">
-      <g-col :span="2">1</g-col>
-      <g-col :span="20" offset='2'>2</g-col>
-    </g-row>
-
-    <g-row >
-      <g-col :span="2">1</g-col>
-      <g-col :span="8" offset='4'>2</g-col>
-      <g-col :span="9" offset='1'>2</g-col>
-    </g-row>
 
   </div>
 
