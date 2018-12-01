@@ -27,6 +27,8 @@ Vue.component('g-content',Content)
 Vue.component('g-toast', Toast)
 Vue.use(plugin)
 
+import createElement from 'vue'
+const h = createElement
 
 new Vue({
   el: '#app',
@@ -36,9 +38,18 @@ new Vue({
     loading3: true,
     message: '双向绑定'
   },
+  created(){
+    this.$toast('message',{
+      enableHtml:false
+    })
+  },
   methods: {
-    showToast(position){
-      this.$toast('我是 message')
+    showToast(){
+      this.$toast('message 测试测试测试测试测试测试测试测试测试测试' +
+          '测试测试测试测试测试测' +
+          '试测试测试测试测试测试测试测试',{
+        enableHtml:false
+      })
     }
   }
 });
