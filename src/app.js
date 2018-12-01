@@ -10,7 +10,8 @@ import Header  from './header'
 import Footer from  './footer'
 import Sider from  './sider'
 import Content from  './content'
-
+import Toast from './toast'
+import plugin from './plugin'
 
 Vue.component('g-button', Button);
 Vue.component('g-icon', Icon);
@@ -23,6 +24,9 @@ Vue.component('g-header', Header);
 Vue.component('g-footer', Footer);
 Vue.component('g-sider', Sider);
 Vue.component('g-content',Content)
+Vue.component('g-toast', Toast)
+Vue.use(plugin)
+
 
 new Vue({
   el: '#app',
@@ -31,6 +35,11 @@ new Vue({
     loading2: false,
     loading3: true,
     message: '双向绑定'
+  },
+  methods: {
+    showToast(position){
+      this.$toast('我是 message')
+    }
   }
 });
 
