@@ -1,5 +1,5 @@
 <template>
-  <div class="row"  :class="rowClass" :style="rowStyle">
+  <div class="row" :class="rowClass" :style="rowStyle">
     <slot></slot>
   </div>
 </template>
@@ -11,32 +11,31 @@
       gutter: {
         Number, String
       },
-      align:{
-        type:String,
-        validator(value){
-          return ['left','right','center'].includes(value)
-        }
-      }
-    },
-    computed:{
-      rowStyle(){
-        let gutter = this.gutter;
-        return{
-          marginLeft:-gutter/2 +'px',
-          marginRight:-gutter/2 +'px'
+      align: {
+        type: String,
+        validator(value) {
+          return ['left', 'right', 'center'].indexOf(value) >= 0
         }
       },
-      rowClass(){
-        let {align} = this;
-        return [align && `align-${align}`]
+      computed: {
+        rowStyle() {
+          let gutter = this.gutter;
+          return {
+            marginLeft: -gutter / 2 + 'px',
+            marginRight: -gutter / 2 + 'px'
+          }
+        },
+        rowClass() {
+          let {align} = this;
+          return [align && `align-${align}`]
+        }
+      },
+      mounted() {
+        this.$children.forEach((vm) => {
+          vm.gutter = this.gutter
+        })
       }
-    },
-    mounted() {
-      this.$children.forEach((vm) => {
-        vm.gutter = this.gutter
-      })
     }
-
   }
 </script>
 
@@ -44,13 +43,13 @@
   .row {
     display: flex;
     flex-wrap: wrap;
-    &.align-left{
+    &.align-left {
       justify-content: flex-start;
     }
-    &.align-right{
+    &.align-right {
       justify-content: flex-end;
     }
-    &.align-center{
+    &.align-center {
       justify-content: center;
     }
   }
