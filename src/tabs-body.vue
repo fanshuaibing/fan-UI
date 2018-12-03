@@ -6,7 +6,8 @@
 
 <script>
   export default {
-    name: "fanTabsBody"
+    name: "fanTabsBody",
+    inject: ['eventBus'],
   }
 </script>
 
