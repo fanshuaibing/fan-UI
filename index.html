@@ -34,18 +34,20 @@
 <body>
 
 <div id="app">
-  <div style="overflow: hidden; padding: 20px 100px">
+  <div style="overflow: hidden; padding:  100px">
     <g-popover position="top">
-      <template slot="content">
-        <div>popover内容popover内容popover内容popover内容popover内容</div>
+      <template slot="content"  slot-scope="{close }">
+        <span style="display: inline-block">popover内容popover内容popover内容popover内容popover内容</span>
+        <g-button @click="close">关闭 </g-button>
       </template>
       <g-button>点我</g-button>
     </g-popover>
 
 
     <g-popover position="bottom">
-    <template slot="content">
-      <div>popover内容</div>
+    <template slot="content" slot-scope="{close}" >
+      <span>popoverssdadda </span>
+      <g-button @click="close">关闭 </g-button>
     </template>
     <g-button>点我</g-button>
   </g-popover>
