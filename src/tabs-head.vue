@@ -20,6 +20,9 @@
 
       })
     },
+    methods:{
+
+    }
   }
 </script>
 
