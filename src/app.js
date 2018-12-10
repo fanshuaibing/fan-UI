@@ -51,9 +51,11 @@ const h = createElement
     selectedTab: 'sports',
   },
   created() {
-
   },
   methods: {
+    yyy(){
+      console.log('yyy');
+    },
     showToast1(){
       this.showToast('top')
     },
