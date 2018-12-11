@@ -7,15 +7,29 @@ title: Button
 
 ### 预览
 ---
-<button-demos></button-demos>
+<ClientOnly>
+  <button-demos/>
+</ClientOnly>
 
-### 代码
-```
+   
+
+### 单个按钮代码
+```html
 <g-button>默认按钮</g-button>
 <g-button icon="settings">默认按钮</g-button>
 <g-button :loading="true">默认按钮</g-button>
 <g-button disabled>默认按钮</g-button>
 
+```
+
+### 按钮组合代码
+```html
+<g-button-group>
+   <g-button icon="left"></g-button>
+   <g-button >默认</g-button>
+   <g-button icon="right"></g-button>
+</g-button-group>
+      
 ```
 
 
