@@ -56,8 +56,8 @@
     computed: {
       colStyle() {
         return {
-          paddingLeft: this.gutter / 2 + 'px',
-          paddingRight: this.gutter / 2 + 'px'
+          paddingLeft:  this.gutter / 2 + 'px',
+          paddingRight:  this.gutter / 2 + 'px'
         }
       },
       colClass() {
@@ -77,9 +77,6 @@
 
 <style scoped lang="scss">
   .col {
-
-    height: 50px;
-    width: 50%;
     @media (min-width: 0px) {
       $class-prefix: col-;
       @for $n from 1 through 24 {

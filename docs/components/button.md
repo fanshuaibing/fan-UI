@@ -1,20 +1,19 @@
 ---
 title: Button 
 ---
+
 # 按钮
 
-## 使用方法
+## 单个按钮
 
 ### 预览
 ---
 <ClientOnly>
-  <button-demos/>
-</ClientOnly>
+  <button-demo1/>
+</ClientOnly> 
 
-   
-
-### 单个按钮代码
-```html
+### 代码
+```
 <g-button>默认按钮</g-button>
 <g-button icon="settings">默认按钮</g-button>
 <g-button :loading="true">默认按钮</g-button>
@@ -22,8 +21,16 @@ title: Button
 
 ```
 
-### 按钮组合代码
-```html
+## 按钮组合
+
+### 预览
+---
+<ClientOnly>
+  <button-demo1/>
+</ClientOnly> 
+
+### 代码
+```
 <g-button-group>
    <g-button icon="left"></g-button>
    <g-button >默认</g-button>

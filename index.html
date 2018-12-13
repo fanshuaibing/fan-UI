@@ -13,30 +13,42 @@
       box-sizing: border-box;
     }
 
-    html {
-      --button-height: 32px;
-      --font-size: 14px;
-      --button-bg: white;
-      --button-active-bg: #eee;
-      --border-radius: 4px;
-      --color: #333;
-      --border-color: #999;
-      --border-color-hover: #666;
-    }
-
-    body {
-      font-size: var(--font-size);
-    }
 
   </style>
 
 </head>
 <body>
 
-<div id="app" style="padding: 100px" >
-  <g-input value="11111">
+<div id="app" style="padding: 100px">
+  * {
+  box-sizing: border-box;
+  }
+  <g-row class="demoRow" gutter="10">
+    <g-col span="8">
+      <div class="demoCol">8</div>
+    </g-col>
+    <g-col span="8">
+      <div class="demoCol">8</div>
+    </g-col>
+    <g-col span="8">
+      <div class="demoCol">8</div>
+    </g-col>
+  </g-row>
+  <g-row class="demoRow" gutter="10">
+    <g-col span="6">
+      <div class="demoCol">6</div>
+    </g-col>
+    <g-col span="6">
+      <div class="demoCol">6</div>
+    </g-col>
+    <g-col span="6">
+      <div class="demoCol">6</div>
+    </g-col>
+    <g-col span="6">
+      <div class="demoCol">6</div>
+    </g-col>
+  </g-row>
 
-  </g-input>
 </div>
 
 <script src="./src/app.js"></script>

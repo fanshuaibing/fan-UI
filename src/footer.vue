@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="g-layout-footer">
     <slot>
 
     </slot>
@@ -13,7 +13,7 @@
 </script>
 
 <style lang="scss"  scoped>
-  .footer{
+  .g-layout-footer{
 
   }
 </style>

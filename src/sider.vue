@@ -2,7 +2,7 @@
   <transition name="slide">
     <div class="sider" v-if="visible">
       <slot></slot>
-      <button @click="visible= false">close</button>
+      <button @click="visible= false" v-if="close">Close</button>
     </div>
   </transition>
 
@@ -11,6 +11,12 @@
 <script>
   export default {
     name: "fanSider",
+    props:{
+      close:{
+        type: Boolean,
+        default: false
+      }
+    },
     data(){
       return {
         visible:true
@@ -22,7 +28,6 @@
 <style lang="scss" scoped>
   .sider {
     position: relative;
-
     > button{
       position: absolute;
       top: 0;

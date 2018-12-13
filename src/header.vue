@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="g-layout-header">
     <slot>
 
     </slot>
@@ -13,7 +13,7 @@
 </script>
 
 <style lang="scss"  scoped>
-  .header{
+  .g-layout-header{
 
   }
 </style>

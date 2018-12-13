@@ -22,7 +22,6 @@ module.exports = {
             '/components/tab.md',
             '/components/popover.md',
             '/components/collapse.md',
-
         ]
       }
     ]

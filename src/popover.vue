@@ -34,22 +34,34 @@
       return {visible: false}
     },
     mounted(){
-      if (this.trigger === 'click') {
-        this.$refs.popover.addEventListener('click', this.onClick)
-      } else {
-        this.$refs.popover.addEventListener('mouseenter', this.open)
-        this.$refs.popover.addEventListener('mouseleave', this.close)
-      }
+      this.addPopoverListeners()
     },
-    destroyed () {
-      if (this.trigger === 'click') {
-        this.$refs.popover.removeEventListener('click', this.onClick)
-      } else {
-        this.$refs.popover.removeEventListener('mouseenter', this.open)
-        this.$refs.popover.removeEventListener('mouseleave', this.close)
-      }
+    beforeDestroy () {
+      this.putBackContent()
+      this.removePopoverListeners()
     },
     methods: {
+      addPopoverListeners(){
+        if (this.trigger === 'click') {
+          this.$refs.popover.addEventListener('click', this.onClick)
+        } else {
+          this.$refs.popover.addEventListener('mouseenter', this.open)
+          this.$refs.popover.addEventListener('mouseleave', this.close)
+        }
+      },
+      removePopoverListeners(){
+        if (this.trigger === 'click') {
+          this.$refs.popover.removeEventListener('click', this.onClick)
+        } else {
+          this.$refs.popover.removeEventListener('mouseenter', this.open)
+          this.$refs.popover.removeEventListener('mouseleave', this.close)
+        }
+      },
+      putBackContent(){
+        const {contentWrapper, popover} = this.$refs
+        if(!contentWrapper){return}
+        popover.appendChild(contentWrapper)
+      },
       positionContent () {
         const {contentWrapper, triggerWrapper} = this.$refs;
         document.body.appendChild(contentWrapper);
