@@ -17,8 +17,9 @@
 > npm install fan-ui  -save
 
 > $ yarn add fan-ui
-```
+
 引入需要用的组件,引入 CSS
+
 ```
 import {Button,ButtonGroup,Icon} from  'fan-ui'
 import 'fan-ui/dist/index.css'
