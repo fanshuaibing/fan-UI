@@ -1,4 +1,4 @@
-# 凡人 UI 官网
-## 写在最前
-### 这是我自己学习 VUE 时，用来练习 VUE 基础知识，以及仿写组件而做的一个组件库。参考了 element-ui 、ant design 做成的 UI 库。仅供学习交流。谢谢
+## 凡人 UI
+
+参考了 element-ui 、ant design 做成的 UI 库。仅供学习交流。
 

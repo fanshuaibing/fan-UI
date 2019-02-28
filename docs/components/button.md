@@ -13,7 +13,7 @@ title: Button
 </ClientOnly> 
 
 ### 代码
-```
+```html
 <g-button>默认按钮</g-button>
 <g-button icon="settings">默认按钮</g-button>
 <g-button :loading="true">默认按钮</g-button>
@@ -26,11 +26,11 @@ title: Button
 ### 预览
 ---
 <ClientOnly>
-  <button-demo1/>
+  <button-demo2/>
 </ClientOnly> 
 
 ### 代码
-```
+```html
 <g-button-group>
    <g-button icon="left"></g-button>
    <g-button >默认</g-button>
