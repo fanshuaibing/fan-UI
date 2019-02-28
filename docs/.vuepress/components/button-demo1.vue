@@ -7,7 +7,6 @@
       <g-button disabled>默认按钮</g-button>
     </div>
   </div>
-
 </template>
 <script>
   import Button from '../../../src/button'
