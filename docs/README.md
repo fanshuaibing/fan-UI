@@ -1,8 +1,12 @@
-#　凡人ＵＩ
-<ClientOnly>
-  <index/>
-</ClientOnly>
+---
+home: true
+heroImage: /stay1.png
+actionText: 快速上手
+actionLink: /install/
+features:
 
-## 可用组件
-按钮、输入框、网格、布局、Toast、Tabs、Popover、手风琴
+- title: 个人学习项目
+  details: 参考 element-UI、ant Design 写的一些简单组件，仅供学习交流。
+---
+
 

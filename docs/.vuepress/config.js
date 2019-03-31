@@ -1,7 +1,7 @@
 module.exports = {
   base:'/fan-UI/',
-  title: '凡人 UI ',
-  description: '一个好用的 UI 框架',
+  title: '默默 UI ',
+  description: '个人用来学习的 UI 组件库',
 
   themeConfig:{
     sidebar: [
